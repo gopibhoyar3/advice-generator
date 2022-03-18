@@ -1,0 +1,115 @@
+@import  url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap'); 
+
+:root{
+	--light-cyan : hsl(193 , 38% , 86%);
+	--neon-green : hsl(150 , 100% , 66%);
+	--grayish-blue : hsl(217 , 19% , 38%);
+	--dark-grayish-blue : hsl(217 , 19% , 24%);
+	
+
+}
+
+* , 
+*::before,
+*::after{
+	padding:0;
+	margin:0;
+	font-family: 'Manrope', sans-serif;
+}
+
+html , body{
+	height : 100%;
+	width:100%;
+	box-sizing:border-box;
+}
+
+body{
+	display:flex;
+	background:var(--grayish-blue);
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	gap:5%;
+}
+
+.container{
+	background-color:var(--dark-grayish-blue);
+	border-radius:15px;
+	display:grid;
+	width:45%;
+	min-height:200px;
+	margin:5% auto;
+	text-align:center;
+	justify-content:center;
+	grid-template-columns:80%;
+	gap:15px;
+	grid-template-rows: 1fr 2.5fr 1fr 10px;
+	grid-template-areas: "header"
+	                     "body"
+			     "svg"
+			     "dice"
+}
+
+.container h3 , .container span{
+
+	color:var(--neon-green);
+	font-size:1.5ch;
+	grid-area:header;
+	padding:7px 0;
+	margin:2% auto;
+}
+
+.container p{
+	color:var(--light-cyan);
+	font-size:2.5ch;
+	font-weight:800;
+	grid-area: body;
+	margin:0 10%;
+}
+
+.container #divider{
+	width:100%;
+	grid-area:svg;
+}
+
+.container .round-container{
+	background-color:var(--neon-green);
+	grid-area:dice;
+	border-radius:50%;
+	width:70px;
+	height:70px;
+	margin:0% auto;
+	position: relative;
+	bottom:25px;
+}
+
+.container .round-container img{
+	margin:25% auto;
+	width:50%;
+}
+.container .round-container:hover{
+	box-shadow:0px 0 15px  var(--neon-green) ;
+}
+
+@media  (min-width: 350px) and (max-width:740px){
+	body{
+		justify-content:flex-start;
+	}
+
+	.container{
+		margin:35% auto;
+		width:70%;
+		min-height:300px;
+	}
+
+	.container #advice{
+		font-size:2ch;
+	}
+}
+.footer { 
+	font-size: 11px; 
+	text-align: center; 
+}
+.footer a { 
+	color: hsl(228, 45%, 44%); 
+}
