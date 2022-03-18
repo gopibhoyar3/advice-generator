@@ -106,10 +106,9 @@ body{
 		font-size:2ch;
 	}
 }
-.footer { 
-	font-size: 11px; 
-	text-align: center; 
-}
 .footer a { 
-	color: hsl(228, 45%, 44%); 
+	font-size: 11px; 
+	text-align: center;
+	color: var(--light-cyan);
+
 }
